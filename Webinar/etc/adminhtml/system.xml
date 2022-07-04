@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="helenoftroy" translate="label" sortOrder="900">
+            <label>HELENOFTROY</label>
+        </tab>
+        <section id="helenoftroy_webinar" showInDefault="1" showInStore="1" showInWebsite="1">
+            <tab>helenoftroy</tab>
+            <label>Webinars</label>
+            <resource>HelenOfTroy_Webinar::helenoftroy_webinar</resource>
+            <group id="module" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+                <label>Webinars Settings</label>
+                <field id="email_sender" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1" >
+                    <label>Email Sender</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                </field>
+                <field id="admin_auth_send_email" translate="label" sortOrder="20" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send to Admin</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,49 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="webinars_pages_listing_data_source" xsi:type="string">
+                    HelenOfTroy\Webinar\Model\ResourceModel\Webinars\Grid\Collection</item>
+                <item name="webinar_attendees_listing_data_source" xsi:type="string">
+                    HelenOfTroy\Webinar\Model\ResourceModel\Attendees\Grid\Collection</item>
+                <item name="webinar_questions_listing_data_source" xsi:type="string">
+                    HelenOfTroy\Webinar\Model\ResourceModel\Questions\Grid\Collection</item>
+                <item name="webinars_speakers_listing_data_source" xsi:type="string">
+                    HelenOfTroy\Webinar\Model\ResourceModel\Speakers\Grid\Collection</item>
+                <item name="webinar_specificspeaker_listing_data_source" xsi:type="string">
+                    HelenOfTroy\Webinar\Model\ResourceModel\SpecificSpeakers\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="HelenOfTroy\Webinar\Model\ResourceModel\Webinars\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">webinars</argument>
+            <argument name="resourceModel" xsi:type="string">HelenOfTroy\Webinar\Model\ResourceModel\Webinars</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="HelenOfTroy\Webinar\Model\ResourceModel\Attendees\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">webinar_attendees</argument>
+            <argument name="resourceModel" xsi:type="string">HelenOfTroy\Webinar\Model\ResourceModel\Attendees</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="HelenOfTroy\Webinar\Model\ResourceModel\Questions\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">webinar_questions</argument>
+            <argument name="resourceModel" xsi:type="string">HelenOfTroy\Webinar\Model\ResourceModel\Questions</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="HelenOfTroy\Webinar\Model\ResourceModel\Speakers\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">webinar_speakers</argument>
+            <argument name="resourceModel" xsi:type="string">HelenOfTroy\Webinar\Model\ResourceModel\Speakers</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="HelenOfTroy\Webinar\Model\ResourceModel\SpecificSpeakers\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">webinar_specific_speakers</argument>
+            <argument name="resourceModel" xsi:type="string">HelenOfTroy\Webinar\Model\ResourceModel\SpecificSpeakers</argument>
+        </arguments>
+    </virtualType>
+    <preference for="HelenOfTroy\Webinar\Model\WebinarInterface" type="HelenOfTroy\Webinar\Model\WebinarsCollections" />
+</config>

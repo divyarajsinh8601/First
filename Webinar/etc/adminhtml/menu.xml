@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Magento_Backend::webinars_pages" title="Webinars" module="Magento_Backend" sortOrder="40" parent="Magento_Backend::content" resource="HelenOfTroy_Webinar::pages"/>
+        <add id="HelenOfTroy_Webinar::pages" title="Pages" module="HelenOfTroy_Webinar" sortOrder="10" parent="Magento_Backend::webinars_pages" dependsOnModule="HelenOfTroy_Webinar" action="webinars/pages/" resource="HelenOfTroy_Webinar::pages"/>
+        <add id="HelenOfTroy_Webinar::speakers" title="Speakers" module="HelenOfTroy_Webinar" sortOrder="10" parent="Magento_Backend::webinars_pages" dependsOnModule="HelenOfTroy_Webinar" action="webinars/speakers/" resource="HelenOfTroy_Webinar::pages"/>
+    </menu>
+</config>

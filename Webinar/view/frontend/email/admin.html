@@ -1,0 +1,37 @@
+<!--@subject Add new attendees @-->
+{{template config_path="design/email/header_template"}}
+<table>
+    <tr class="admin-intro">
+        <td style="display: block;">
+            Customer Name: {{var customer_name}}
+        </td>
+        <td>
+            Customer Email: {{var customer_email}}
+        </td>
+        <td>
+            Customer Id: {{var customer_id}}
+        </td>
+        <td>
+            Webinar Id: {{var webinar_id}}
+        </td>
+        <td>
+            Webinar Title: {{var title}}
+        </td>
+        <td>
+            Webinar Date: {{var webinar_date}}
+        </td>
+        <td>
+            Webinar Status: {{var webinar_status}}
+        </td>
+        <td>
+            Webinar Url: <a href="{{var webinar_url}}"> {{var webinar_url}} </a>
+        </td>
+        <td>
+            Image Url: <a href="{{var image_url}}"> {{var image_url}} </a>
+        </td>
+        <td>
+            Store: {{var store_id}}
+        </td>
+    </tr>
+</table>
+{{template config_path="design/email/footer_template"}}
